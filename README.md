@@ -12,6 +12,12 @@ python -m http.server 8000 --directory dist
 
 Open http://localhost:8000 in your browser.
 
+With Node.js 22 or later, you can also run `npm start` and open http://localhost:3000.
+
+## Deploy to Railway
+
+Create a Railway service from this GitHub repository. Railway detects the included Dockerfile and serves the game using its assigned `PORT`; no secrets or build commands are required. Once deployment is healthy, generate a public domain in the service's Networking settings.
+
 ## Files
 
 - `dist/index.html`: game interface
