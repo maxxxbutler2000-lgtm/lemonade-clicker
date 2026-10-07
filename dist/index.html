@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lemonade Empire · Cosmic Clicker</title><meta name="description" content="Sell lemonade and cookies, grow your business across the multiverse, and unlock achievements for bonus clicks."><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css?v=8"></head>
+<body>
+<header><a class="brand" href="./"><span class="brand-icon">✳</span> LEMONADE EMPIRE</a><span class="edition">THE LEMONADE EMPIRE</span><div class="header-actions"><button id="restart" class="quiet">New game</button><button id="shop-toggle" class="shop-toggle" aria-controls="shop" aria-expanded="true">Upgrades</button></div></header>
+<main>
+<section class="play">
+<div class="score-panel">
+<div class="balance-label">CLICKS IN THE BANK</div><div id="balance" class="balance" aria-live="off">0</div>
+<div class="rates"><span><b id="power">1</b> per click</span><span class="divider"></span><span><b id="rate">0</b> per second</span></div>
+</div><div class="business-scene"><img id="scene" src="images/stage-redone-1.webp" alt="Lemonade stand with a lemon emblem"><div class="scene-label"><span id="stage-count">STAGE 1</span><b id="stage-name">Lemonade stand</b><small id="stage-flavor">A little stand. A very big dream.</small></div>
+<div class="click-area"><button id="click" class="click-button" aria-label="Make clicks"><span class="click-symbol">✳</span><span>CLICK!</span></button><div id="particles" aria-hidden="true"></div></div></div>
+<p class="hint">Click to squeeze. Buy to grow.</p>
+<div class="milestone"><div><span id="rank">NEXT BUSINESS EXPANSION</span><b id="milestone-label">0 / 250 earned</b></div><div class="track"><div id="progress"></div></div></div>
+</section>
+<section id="shop" class="shop" aria-label="Upgrade shop"><button id="shop-minimize" class="minimize" aria-label="Minimize upgrade shop">− Hide</button><div class="shop-heading"><h2>Upgrades</h2><p class="shop-wallet"><span id="shop-balance">0</span> clicks available</p></div>
+<div class="shop-tabs" role="tablist" aria-label="Shop categories"><button role="tab" id="tab-power" aria-controls="panel-power" aria-selected="true">Sales</button><button role="tab" id="tab-auto" aria-controls="panel-auto" aria-selected="false">Business</button><button role="tab" id="tab-boosts" aria-controls="panel-boosts" aria-selected="false">Boosts</button><button role="tab" id="tab-achievements" aria-controls="panel-achievements" aria-selected="false">Achievements</button></div>
+<div class="shop-content">
+<div role="tabpanel" id="panel-power" aria-labelledby="tab-power"><p class="panel-help">Earn more clicks with each sale.</p><div id="upgrades"></div></div>
+<div role="tabpanel" id="panel-auto" aria-labelledby="tab-auto" hidden><p class="panel-help">Earn clicks automatically while you play.</p><div id="generators"></div></div>
+<div role="tabpanel" id="panel-boosts" aria-labelledby="tab-boosts" hidden><p class="panel-help">Each boost can be bought once. Different boosts combine.</p><div id="boosts"></div></div>
+<div role="tabpanel" id="panel-achievements" aria-labelledby="tab-achievements" hidden><div class="achievement-unlock"><div><h3>★ Achievements <span id="achievement-count">0 / 62</span></h3><p id="achievement-help"></p></div><button id="unlock-achievements" class="buy">Buy · 100 ◈</button></div><div id="achievement-list"></div></div>
+</div><footer class="shop-footer"><span>✦</span> Buy upgrades. Grow your business.</footer></section>
+</main><div id="toast" role="status"></div>
+<dialog id="reset-dialog"><h2>Start a new lemonade stand?</h2><p>Your current clicks, upgrades, and achievements will be reset.</p><div><button id="cancel-reset">Keep playing</button><button id="confirm-reset">Start fresh</button></div></dialog>
+<script src="game.js?v=8"></script></body></html>
