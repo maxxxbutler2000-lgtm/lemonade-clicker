@@ -1049,42 +1049,42 @@ const LEMONADE_CONTENT={
     {
       "name": "Lemonade stand",
       "at": 0,
-      "file": "stage-redone-1.webp",
+      "file": "stage-classic-1.png",
       "id": "stage-redone-1",
       "legacyAt": 0
     },
     {
       "name": "Upgraded lemonade stand",
       "at": 250,
-      "file": "stage-redone-2.webp",
+      "file": "stage-classic-2.png",
       "id": "stage-redone-2",
       "legacyAt": 250
     },
     {
       "name": "Lemonade shop",
       "at": 2500,
-      "file": "stage-redone-3.webp",
+      "file": "stage-classic-3.png",
       "id": "stage-redone-3",
       "legacyAt": 2500
     },
     {
       "name": "Bottling workshop",
       "at": 25000,
-      "file": "stage-redone-4.webp",
+      "file": "stage-classic-4.png",
       "id": "stage-redone-4",
       "legacyAt": 25000
     },
     {
       "name": "Lemonade factory",
       "at": 250000,
-      "file": "stage-redone-5.webp",
+      "file": "stage-classic-5.png",
       "id": "stage-redone-5",
       "legacyAt": 250000
     },
     {
       "name": "Mega lemonade factory",
       "at": 2500000,
-      "file": "stage-redone-6.webp",
+      "file": "stage-classic-6.png",
       "id": "stage-redone-6",
       "legacyAt": 2500000
     },
@@ -1098,7 +1098,7 @@ const LEMONADE_CONTENT={
     {
       "name": "Lemonade metropolis",
       "at": 250000000,
-      "file": "stage-redone-7.webp",
+      "file": "stage-classic-7.png",
       "id": "stage-redone-7",
       "legacyAt": 25000000
     },
@@ -1140,28 +1140,28 @@ const LEMONADE_CONTENT={
     {
       "name": "Worldwide lemonade empire",
       "at": 250000000000000,
-      "file": "stage-redone-8.webp",
+      "file": "stage-classic-8.png",
       "id": "stage-redone-8",
       "legacyAt": 250000000
     },
     {
       "name": "Lemon launch headquarters",
       "at": 2500000000000000,
-      "file": "stage-redone-9.webp",
+      "file": "stage-classic-9.png",
       "id": "stage-redone-9",
       "legacyAt": 2500000000
     },
     {
       "name": "Moon lemonade colony",
       "at": 25000000000000000,
-      "file": "stage-redone-10.webp",
+      "file": "stage-classic-10.png",
       "id": "stage-redone-10",
       "legacyAt": 25000000000
     },
     {
       "name": "Martian lemonade civilization",
       "at": 250000000000000000,
-      "file": "stage-redone-11.webp",
+      "file": "stage-classic-11.png",
       "id": "stage-redone-11",
       "legacyAt": 250000000000
     },
@@ -1189,7 +1189,7 @@ const LEMONADE_CONTENT={
     {
       "name": "Solar system juice trade",
       "at": 2500000000000000000000,
-      "file": "stage-redone-12.webp",
+      "file": "stage-classic-12.png",
       "id": "stage-redone-12",
       "legacyAt": 2500000000000
     },
@@ -1217,7 +1217,7 @@ const LEMONADE_CONTENT={
     {
       "name": "Galactic lemonade empire",
       "at": 25000000000000000000000000,
-      "file": "stage-redone-13.webp",
+      "file": "stage-classic-13.png",
       "id": "stage-redone-13",
       "legacyAt": 25000000000000
     },
@@ -1259,7 +1259,7 @@ const LEMONADE_CONTENT={
     {
       "name": "Multidimensional lemonade empire",
       "at": 25000000000000000000000000000000,
-      "file": "stage-redone-14.webp",
+      "file": "stage-classic-14.png",
       "id": "stage-redone-14",
       "legacyAt": 250000000000000
     },
@@ -1308,7 +1308,7 @@ const LEMONADE_CONTENT={
     {
       "name": "Multiverse lemonade citadel",
       "at": 250000000000000000000000000000000000000,
-      "file": "stage-redone-15.webp",
+      "file": "stage-classic-15.png",
       "id": "stage-redone-15",
       "legacyAt": 2500000000000000
     },
