@@ -14,6 +14,8 @@ function loadGame(){try{const raw=localStorage.getItem(SAVE_KEY);if(raw)applySna
 $('fun-toggle').addEventListener('click',()=>{renderFun();$('fun-dialog').showModal();});$('fun-close').addEventListener('click',()=>$('fun-dialog').close());
 $('rebirth').addEventListener('click',()=>{if(!rebirthReward())return;$('rebirth-confirm-info').textContent=`Gain ${rebirthReward()} permanent Zest. Your bank and shop reset to a new stand. Your achievements and arcade records stay.`;$('rebirth-dialog').showModal();});$('cancel-rebirth').addEventListener('click',()=>$('rebirth-dialog').close());$('confirm-rebirth').addEventListener('click',()=>{performRebirth();$('rebirth-dialog').close();});
 function offerGoldenLemon(){if(clicks<=0)return false;return showLemonOffer('golden-lemon');}
-setInterval(offerGoldenLemon,45000);
+let nextGoldenAt=Date.now()+surpriseDelay('golden');
+function scheduleGolden(){nextGoldenAt=Date.now()+surpriseDelay('golden');}
+setInterval(()=>{if(Date.now()>=nextGoldenAt&&offerGoldenLemon())scheduleGolden();},1000);
 $('golden-lemon').addEventListener('click',()=>{if(!claimLemonOffer('golden-lemon'))return;repairNumbers();const percent=5+Math.floor(Math.random()*21);const amount=multiplyAmount(clicks,percent/100);luckyLemons++;const earned=reward(amount, false);notify(`Golden lemon! +${percent}% of your bank · ${fmt(earned)} bonus clicks`);});
 loadGame();renderFun();setInterval(saveGame,2000);window.addEventListener('pagehide',saveGame);document.addEventListener('visibilitychange',()=>{if(document.hidden)saveGame();});$('confirm-reset').addEventListener('click',saveGame);

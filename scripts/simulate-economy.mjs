@@ -13,9 +13,9 @@ export function simulateEconomy(content,{tapsPerSecond=2,events=true,strategy='p
  function price(item){return item.cost*(boosts.includes(item)?1:Math.pow(1.18,item.owned));}
  function awards(p){if(!achievements)return;const values={total,taps:Math.floor(taps),purchases,stage,power:p.power,rate:p.rate,machines:businesses.reduce((n,x)=>n+x.owned,0),boosts:boosts.filter(x=>x.owned).length,cookies:businesses.find(x=>x.name==='Cookie counter').owned,upsells:sales.find(x=>x.name==='Upselling').owned,lucky,rebirths:0,dodges:0,caught:0};let bonus=0;for(const g of goals){if(!g.awarded&&stage>=(g.minStage||0)&&values[g.metric]>=g.target){g.awarded=true;bonus+=g.reward;}}bank+=bonus;if(stage>=3)largestLaterBonusShare=Math.max(largestLaterBonusShare,bonus/(stages[stage+1]?.at||stages[stage].at));largestBonusShare=Math.max(largestBonusShare,bonus/(stages[stage+1]?.at||stages[stage].at));}
  while(stage<stages.length-1&&time<maxSeconds){
-  time+=dt;const p=production();const festival=events&&time>=120&&time%150<30?2:1;
+  time+=dt;const p=production();const festival=events&&time>=420&&(time-420)%450<30?2:1;
   const earned=(p.power*tapsPerSecond+p.rate)*dt*festival;bank+=earned;total+=earned;taps+=tapsPerSecond*dt;
-  if(events&&Math.floor(time/dt)%Math.round(45/dt)===0){bank*=1.15;lucky++;}
+  if(events&&Math.floor(time/dt)%Math.round(270/dt)===0){bank*=1.15;lucky++;}
   const before=stage;while(stages[stage+1]&&bank>=stages[stage+1].at){stage++;reached[stage]=time;}if(stage-before>1)skips.push({time,from:before,to:stage});
   awards({power:p.power*festival,rate:p.rate*festival});if(stage===stages.length-1)break;
   if(time-lastPurchase<.5)continue;

@@ -41,3 +41,8 @@ header{background:#f9fcf1cc;backdrop-filter:blur(18px);padding-inline:16px}.bran
 @media(max-width:700px){.dev-dialog{padding:16px}.dev-dialog .fun-heading h2{font-size:21px}}
 
 @media(max-width:700px){body.dev-unlocked .brand{min-width:0;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}body.dev-unlocked .header-actions{flex-shrink:0;gap:4px}body.dev-unlocked .header-actions .quiet{font-size:11px;padding:7px 5px}#dev-toggle{font-size:0!important}#dev-toggle::after{content:'🧪 Lab';font-size:11px}}
+
+.click-lemon-art,.golden-lemon-art{display:block;width:82px;height:82px;background-image:url('images/arcade-sprites.png');background-size:400% 200%;background-position:0 0;filter:drop-shadow(0 3px 3px #80581755);pointer-events:none}.click-button:active .click-lemon-art{transform:scale(.93)}
+@media(max-width:700px){.click-lemon-art{width:74px;height:74px}}
+
+.golden-lemon-art{width:56px;height:56px;margin:0 auto}@media(max-width:700px){.golden-lemon-art{width:44px;height:44px}}
