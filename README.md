@@ -35,3 +35,11 @@ Create a Railway service from this GitHub repository. Railway detects the includ
 - Starting a new game resets the current run. Progress is currently held in memory.
 
 The game uses plain HTML, CSS, and JavaScript. Google Fonts is optional; local font fallbacks are provided. Numeric limits prevent overflowing totals or purchases.
+
+## Lemon Lounge expansion
+
+The Play button opens Flappy Lemon (10,000 bank clicks per fully avoided squeezer), Cosmic Cookie Catch, Lemon Express deliveries, Happy Hour, and rebirths. There are 45 surprise destinations, 139 shop items, and 107 achievements. Golden lemons occasionally appear in the main world.
+
+Rebirths unlock at 1 million run earnings; each subsequent rebirth requires ten times more. Each permanent Zest adds 25% to tap and business earnings. Rebirth resets the bank and shop while retaining achievement rewards already collected and arcade records. New game clears everything.
+
+Progress is stored in localStorage on the current browser and domain, with up to two hours of offline business income. Private browsing, clearing browser storage, or using another device/domain does not carry that save over.

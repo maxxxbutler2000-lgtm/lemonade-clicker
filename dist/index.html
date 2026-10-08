@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lemonade Empire · Cosmic Clicker</title><meta name="description" content="Sell lemonade and cookies, grow your business across the multiverse, and unlock achievements for bonus clicks."><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css?v=8"></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lemonade Empire · Cosmic Clicker</title><meta name="description" content="Sell lemonade and cookies, grow your business across the multiverse, and unlock achievements for bonus clicks."><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="style.css?v=9"></head>
 <body>
-<header><a class="brand" href="./"><span class="brand-icon">✳</span> LEMONADE EMPIRE</a><span class="edition">THE LEMONADE EMPIRE</span><div class="header-actions"><button id="restart" class="quiet">New game</button><button id="shop-toggle" class="shop-toggle" aria-controls="shop" aria-expanded="true">Upgrades</button></div></header>
+<header><a class="brand" href="./"><span class="brand-icon">✳</span> LEMONADE EMPIRE</a><span class="edition">THE LEMONADE EMPIRE</span><div class="header-actions"><button id="fun-toggle" class="quiet">🍋 Play</button><button id="restart" class="quiet">New game</button><button id="shop-toggle" class="shop-toggle" aria-controls="shop" aria-expanded="true">Upgrades</button></div></header>
 <main>
 <section class="play">
 <div class="score-panel">
@@ -22,5 +22,15 @@
 <div role="tabpanel" id="panel-achievements" aria-labelledby="tab-achievements" hidden><div class="achievement-unlock"><div><h3>★ Achievements <span id="achievement-count">0 / 62</span></h3><p id="achievement-help"></p></div><button id="unlock-achievements" class="buy">Buy · 100 ◈</button></div><div id="achievement-list"></div></div>
 </div><footer class="shop-footer"><span>✦</span> Buy upgrades. Grow your business.</footer></section>
 </main><div id="toast" role="status"></div>
-<dialog id="reset-dialog"><h2>Start a new lemonade stand?</h2><p>Your current clicks, upgrades, and achievements will be reset.</p><div><button id="cancel-reset">Keep playing</button><button id="confirm-reset">Start fresh</button></div></dialog>
-<script src="game.js?v=8"></script></body></html>
+<dialog id="reset-dialog"><h2>Start a new lemonade stand?</h2><p>This erases your bank, upgrades, achievements, rebirth bonuses, arcade records, and saved progress on this device.</p><div><button id="cancel-reset">Keep playing</button><button id="confirm-reset">Start fresh</button></div></dialog>
+<dialog id="fun-dialog" class="fun-dialog"><div class="fun-heading"><div><small>THE LEMON LOUNGE</small><h2>Take a squeeze break</h2></div><button id="fun-close" aria-label="Close lemon lounge">✕</button></div><p class="fun-intro">Little adventures. Big lemonade dreams. Your businesses keep earning while you play.</p>
+<div class="fun-grid">
+<button class="activity" id="open-flappy"><span>🍋</span><b>Flappy Lemon</b><small>Dodge squeezers · +10K each</small></button>
+<button class="activity" id="open-cookies"><span>🍪</span><b>Cosmic Cookie Catch</b><small>Catch cookies · avoid meteors</small></button>
+<button class="activity" id="delivery"><span>🚀</span><b>Lemon Express</b><small id="delivery-label">Send a delivery for bonus clicks</small></button>
+<button class="activity" id="festival"><span>🎉</span><b>Lemonade Happy Hour</b><small id="festival-label">Double earnings for 30 seconds</small></button>
+</div><div class="legacy-card"><div><small>FRESH START, BIGGER DREAM</small><h3>Rebirth your empire</h3><p id="legacy-stats"></p><p id="rebirth-info"></p><p class="legacy-detail">Reset bank, this run’s earnings, and shop purchases. Keep achievements, arcade records, and permanent Zest. Each Zest adds 25% to sales and business earnings.</p></div><button id="rebirth" class="buy">Rebirth</button></div><p id="arcade-records" class="fun-intro"></p><p id="save-status" class="fun-intro">Progress saves automatically on this device.</p></dialog>
+<dialog id="arcade-dialog" class="arcade-dialog"><div class="fun-heading"><h2 id="arcade-title">Flappy Lemon</h2><button id="arcade-close" aria-label="Close arcade">✕</button></div><p id="arcade-help"></p><canvas id="arcade" width="600" height="420" tabindex="0" aria-label="Arcade game. Use Space or tap to flap; arrow keys or drag to catch cookies."></canvas><div class="arcade-controls"><b id="arcade-score" role="status">Ready?</b><button id="arcade-start" class="buy">Start game</button></div></dialog>
+<dialog id="rebirth-dialog"><h2>A fresh squeeze?</h2><p id="rebirth-confirm-info"></p><div><button id="cancel-rebirth">Keep playing</button><button id="confirm-rebirth">Rebirth my empire</button></div></dialog>
+<button id="golden-lemon" class="golden-lemon" hidden aria-label="Catch the golden lemon for bonus clicks">🍋<small>Catch me!</small></button>
+<script src="game.js?v=9"></script><script src="fun.js?v=9"></script></body></html>
