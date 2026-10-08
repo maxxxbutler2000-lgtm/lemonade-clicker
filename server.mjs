@@ -1,3 +1,4 @@
+import { createAccounts } from './accounts.mjs';
 import { createServer } from 'node:http';
 import { createReadStream } from 'node:fs';
 import { stat } from 'node:fs/promises';
@@ -17,7 +18,9 @@ const types = {
   '.ico': 'image/x-icon',
 };
 
+const accounts = await createAccounts(process.env.DATABASE_URL, { production: process.env.NODE_ENV === 'production' });
 const server = createServer(async (request, response) => {
+  if (request.url?.startsWith('/api/')) { await accounts.handle(request, response); return; }
   if (!['GET', 'HEAD'].includes(request.method)) {
     response.writeHead(405, { Allow: 'GET, HEAD' });
     response.end('Method not allowed');
@@ -55,4 +58,4 @@ const server = createServer(async (request, response) => {
 });
 
 server.listen(port, '0.0.0.0', () => console.log(`Lemonade Empire listening on port ${port}`));
-process.on('SIGTERM', () => server.close(() => process.exit(0)));
+for (const signal of ['SIGTERM', 'SIGINT']) process.on(signal, () => server.close(async () => { await accounts.close(); process.exit(0); }));
